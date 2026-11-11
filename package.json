@@ -7,7 +7,10 @@
     "selftest": "node scripts/runlog.mjs --selftest",
     "run": "node scripts/run_all.mjs",
     "brief": "node scripts/daily_brief.mjs",
-    "flush": "node scripts/sheet_bridge.mjs --flush"
+    "flush": "node scripts/sheet_bridge.mjs --flush",
+    "build:dashboard": "node scripts/build_dashboard.mjs",
+    "dashboard": "node scripts/run_all.mjs && node scripts/build_dashboard.mjs",
+    "serve": "npx serve dashboard"
   },
   "engines": { "node": ">=18" },
   "license": "MIT"

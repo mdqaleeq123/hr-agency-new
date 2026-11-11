@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T17:15:12.574Z",
+  "generatedAt": "2026-11-11T17:20:54.949Z",
   "agency": "HR Agency",
   "brand": "",
   "timezone": "Asia/Karachi",
@@ -327,8 +327,75 @@
       "status": "ok"
     }
   ],
-  "outputs": [],
-  "brief": null,
+  "outputs": [
+    {
+      "file": "audit_report.md",
+      "agent": "compliance-auditor",
+      "size": 198,
+      "truncated": false,
+      "content": "# Audit report\n\n- Aisha Khan: claims 5 yrs but dates add up to 7 (verify at screening)\n- Sara Malik: claims 4 yrs but dates add up to 6 (verify at screening)\n- Usman Tariq: invalid or missing email\n"
+    },
+    {
+      "file": "candidates.json",
+      "agent": "resume-parser",
+      "size": 1670,
+      "truncated": false,
+      "content": "[\n  {\n    \"name\": \"Aisha Khan\",\n    \"email\": \"aisha.khan@example.com\",\n    \"phone\": \"+92 300 1234567\",\n    \"location\": \"Islamabad, Pakistan\",\n    \"skills\": [\n      \"python\",\n      \"django\",\n      \"sql\",\n      \"postgresql\",\n      \"aws\",\n      \"docker\",\n      \"rest apis\",\n      \"git\"\n    ],\n    \"education\": \"BS Computer Science, NUST, 2019\",\n    \"years_computed\": 7,\n    \"years_claimed\": 5,\n    \"source_file\": \"aisha_khan.txt\"\n  },\n  {\n    \"name\": \"Bilal Ahmed\",\n    \"email\": \"bilal.ahmed@example.com\",\n    \"phone\": \"0321-7654321\",\n    \"location\": \"Lahore\",\n    \"skills\": [\n      \"javascript\",\n      \"react\",\n      \"node.js\",\n      \"html\",\n      \"css\",\n      \"git\",\n      \"mongodb\"\n    ],\n    \"education\": \"BS Software Engineering, FAST, 2025\",\n    \"years_computed\": 1,\n    \"years_claimed\": 1,\n    \"source_file\": \"bilal_ahmed.txt\"\n  },\n  {\n    \"name\": \"Sara Malik\",\n    \"email\": \"sara.malik@example.com\",\n    \"phone\": \"+92 333 9988776\",\n    \"location\": \"Karachi, Pakistan\",\n    \"skills\": [\n      \"python\",\n      \"sql\",\n      \"power bi\",\n      \"excel\",\n      \"tableau\",\n      \"statistics\",\n      \"pandas\"\n    ],\n    \"education\": \"MS Data Science, IBA Karachi, 2020\",\n    \"years_computed\": 6,\n    \"years_claimed\": 4,\n    \"source_file\": \"sara_malik.txt\"\n  },\n  {\n    \"name\": \"Usman Tariq\",\n    \"email\": \"usman.tariq@example\",\n    \"phone\": \"03005551234\",\n    \"location\": \"Rawalpindi\",\n    \"skills\": [\n      \"aws\",\n      \"docker\",\n      \"kubernetes\",\n      \"terraform\",\n      \"linux\",\n      \"python\",\n      \"jenkins\"\n    ],\n    \"education\": \"BS Electrical Engineering, UET, 2018\",\n    \"years_computed\": 5,\n    \"years_claimed\": null,\n    \"source_file\": \"usman_tariq.txt\"\n  }\n]"
+    },
+    {
+      "file": "funnel_metrics.json",
+      "agent": "hr-analyst",
+      "size": 223,
+      "truncated": false,
+      "content": "{\n  \"metrics\": {\n    \"candidates\": 4,\n    \"shortlisted\": 2,\n    \"screening\": 1,\n    \"talent_pool\": 1,\n    \"shortlist_rate_pct\": 50\n  },\n  \"flags\": [\n    \"Bottleneck: only 2 shortlisted for 3 openings - widen sourcing\"\n  ]\n}"
+    },
+    {
+      "file": "jd_REQ-101.md",
+      "agent": "jd-outreach-writer",
+      "size": 539,
+      "truncated": false,
+      "content": "# Backend Engineer\n\n**Location:** Islamabad (hybrid)  \n**Openings:** 2\n\n## About the role\nYou will join our team as a Backend Engineer and work on problems that matter to our customers.\n\n## What you bring\n- Hands-on experience with python\n- Hands-on experience with sql\n- Hands-on experience with aws\n- Hands-on experience with docker\n- 3+ years of relevant experience\n\n## Nice to have\n- django\n- postgresql\n- kubernetes\n\n## Equal opportunity\nWe welcome applicants of every background and evaluate all candidates on skills and experience.\n"
+    },
+    {
+      "file": "jd_REQ-102.md",
+      "agent": "jd-outreach-writer",
+      "size": 504,
+      "truncated": false,
+      "content": "# HR Data Analyst\n\n**Location:** Remote (Pakistan)  \n**Openings:** 1\n\n## About the role\nYou will join our team as a HR Data Analyst and work on problems that matter to our customers.\n\n## What you bring\n- Hands-on experience with python\n- Hands-on experience with sql\n- Hands-on experience with power bi\n- 2+ years of relevant experience\n\n## Nice to have\n- pandas\n- tableau\n- statistics\n\n## Equal opportunity\nWe welcome applicants of every background and evaluate all candidates on skills and experience.\n"
+    },
+    {
+      "file": "onboarding_Aisha_Khan.md",
+      "agent": "onboarding-coordinator",
+      "size": 582,
+      "truncated": false,
+      "content": "# Onboarding track - Aisha Khan (Backend Engineer)\nStart: 2026-11-16 | Manager: Engineering Lead\n\n## Before day 1\n- [ ] Offer letter signed\n- [ ] Laptop and accounts requested\n- [ ] Buddy assigned\n- [ ] Welcome email drafted (HELD)\n\n## First 30 days\n- [ ] Orientation and policy walkthrough\n- [ ] Dev environment working\n- [ ] First small task shipped\n- [ ] Week-4 check-in with manager\n\n## Days 31-60\n- [ ] Own a feature end to end\n- [ ] Cross-team intro meetings\n- [ ] 60-day feedback survey\n\n## Days 61-90\n- [ ] Independent on-call shadowing\n- [ ] 90-day review and goal setting\n"
+    },
+    {
+      "file": "outreach_drafts.md",
+      "agent": "jd-outreach-writer",
+      "size": 1234,
+      "truncated": false,
+      "content": "# Outreach drafts (all held for human approval)\n\n### Draft for Aisha Khan  (HELD - not sent)\nSubject: Opportunity at our company\n\nHi Aisha,\n\nYour background in python, django, sql stood out. We have an open role that could be a good fit and would like to share details. Would you be open to a short call this week?\n\nBest regards,\nHR Team\n\n---\n### Draft for Bilal Ahmed  (HELD - not sent)\nSubject: Opportunity at our company\n\nHi Bilal,\n\nYour background in javascript, react, node.js stood out. We have an open role that could be a good fit and would like to share details. Would you be open to a short call this week?\n\nBest regards,\nHR Team\n\n---\n### Draft for Sara Malik  (HELD - not sent)\nSubject: Opportunity at our company\n\nHi Sara,\n\nYour background in python, sql, power bi stood out. We have an open role that could be a good fit and would like to share details. Would you be open to a short call this week?\n\nBest regards,\nHR Team\n\n---\n### Draft for Usman Tariq  (HELD - not sent)\nSubject: Opportunity at our company\n\nHi Usman,\n\nYour background in aws, docker, kubernetes stood out. We have an open role that could be a good fit and would like to share details. Would you be open to a short call this week?\n\nBest regards,\nHR Team\n"
+    },
+    {
+      "file": "pipeline.csv",
+      "agent": "pipeline-manager",
+      "size": 272,
+      "truncated": false,
+      "content": "\"candidate\",\"best_req\",\"score\",\"stage\",\"missing_required_skills\"\n\"Aisha Khan\",\"REQ-101\",\"93\",\"Shortlisted\",\"\"\n\"Bilal Ahmed\",\"REQ-101\",\"0\",\"Talent pool\",\"python; sql; aws; docker\"\n\"Sara Malik\",\"REQ-102\",\"100\",\"Shortlisted\",\"\"\n\"Usman Tariq\",\"REQ-101\",\"69\",\"Screening\",\"sql\"\n"
+    },
+    {
+      "file": "sourcing_plan.md",
+      "agent": "talent-sourcer",
+      "size": 846,
+      "truncated": false,
+      "content": "# Sourcing plan\n\n## REQ-101 - Backend Engineer (Islamabad (hybrid), 2 openings)\n- Boolean string: `(\"Backend Engineer\" OR \"Backend Developer\") AND (\"python\" AND \"sql\" AND \"aws\" AND \"docker\") AND (\"django\" OR \"postgresql\" OR \"kubernetes\")`\n- Channels: LinkedIn search (manual review), Rozee.pk, GitHub topic search, university alumni groups\n- Target experience: 3+ years. Outreach cap: 25 prospects/week, all drafts held for human approval\n\n## REQ-102 - HR Data Analyst (Remote (Pakistan), 1 opening)\n- Boolean string: `(\"HR Data Analyst\" OR \"HR Data Analyst\") AND (\"python\" AND \"sql\" AND \"power bi\") AND (\"pandas\" OR \"tableau\" OR \"statistics\")`\n- Channels: LinkedIn search (manual review), Rozee.pk, GitHub topic search, university alumni groups\n- Target experience: 2+ years. Outreach cap: 25 prospects/week, all drafts held for human approval\n\n"
+    }
+  ],
+  "brief": {
+    "file": "2026-11-04.md",
+    "content": "```\nHR AGENCY DAILY BRIEF - 2026-11-04\n========================================\nAgents reported: 8/8 | Runs today: 39\n\nNEEDS ATTENTION\n  [PARTIAL] compliance-auditor: Audited candidate data and JDs, found 3 issue(s) for review\n\nAGENT STATUS\n  hr-chief-of-staff        OK       Compiled this brief and updated the sheet ledger\n  talent-sourcer           OK       Built sourcing plan with boolean search strings for 2 open requisitions\n  resume-parser            OK       Parsed 4 resumes into structured candidate records\n  jd-outreach-writer       OK       Drafted 2 job descriptions and 4 held outreach emails\n  pipeline-manager         OK       Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)\n  onboarding-coordinator   OK       Generated 30/60/90 onboarding tracks for 1 new hire(s)\n  hr-analyst               OK       Computed funnel metrics, flagged 1 bottleneck(s)\n  compliance-auditor       PARTIAL  Audited candidate data and JDs, found 3 issue(s) for review\n\nFull ledger: Google Sheet \"HR Agency Ledger\" (tab: Ledger)\n```\n"
+  },
   "counts": {
     "ok": 35,
     "partial": 5
