@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agency Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5f2; --surface:#ffffff; --ink:#18262a; --muted:#5d6e70; --line:#d9e0dc;
+  --brand:#0d6b5a; --ok:#0d7a4f; --ok-bg:#dcf2e6; --partial:#9a6200; --partial-bg:#fbebc8;
+  --failed:#b3261e; --failed-bg:#f9dcd9; --other:#46556a; --other-bg:#e3e8f0;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101a1c; --surface:#172326; --ink:#e7efec; --muted:#98aba9; --line:#2a3b3e;
+  --brand:#4cc2a8; --ok:#6fdca6; --ok-bg:#16382b; --partial:#f1c36a; --partial-bg:#40330f;
+  --failed:#ff9a92; --failed-bg:#4a1f1c; --other:#b3c1d6; --other-bg:#25303f;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0;line-height:1.15}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+header{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-end;padding-bottom:22px;border-bottom:2px solid var(--ink)}
+h1{font-size:clamp(28px,5vw,46px);font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--muted);margin-top:6px}
+.tally{display:flex;gap:10px;flex-wrap:wrap}
+.tally div{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 14px;min-width:84px}
+.tally b{display:block;font:800 26px "Bricolage Grotesque",sans-serif}
+.tally span{color:var(--muted);font-size:13px}
+section{margin-top:38px}
+h2{font-size:22px;font-weight:600;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.card.pm{border-color:var(--brand);border-width:2px}
+.card h3{font-size:17px;font-weight:600}
+.role{color:var(--muted);font-size:13px}
+.task{font-size:14px}
+.meta{color:var(--muted);font-size:12.5px;margin-top:auto}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:500;width:fit-content;background:var(--other-bg);color:var(--other)}
+.badge.ok{background:var(--ok-bg);color:var(--ok)}
+.badge.partial{background:var(--partial-bg);color:var(--partial)}
+.badge.failed{background:var(--failed-bg);color:var(--failed)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+select,input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+.tablebox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--muted);font-size:13px;background:color-mix(in srgb,var(--bg) 60%,var(--surface))}
+tr:last-child td{border-bottom:0}
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.file{all:unset;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:block}
+.file:hover,.file:focus-visible{border-color:var(--brand)}
+.file:focus-visible,select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.file b{display:block;word-break:break-all}.file span{color:var(--muted);font-size:13px}
+pre.brief{white-space:pre-wrap;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;font:14px/1.6 "IBM Plex Sans",sans-serif;margin:0;max-height:480px;overflow:auto}
+dialog{width:min(900px,94vw);max-height:86vh;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);padding:0}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.dh button{font:inherit;padding:6px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:6px;cursor:pointer}
+dialog pre{margin:0;padding:16px;overflow:auto;max-height:70vh;font:13px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap}
+.empty{color:var(--muted);padding:16px}
+footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1 id="title">Marketing Agency</h1>
+      <div class="sub" id="sub">Loading…</div>
+    </div>
+    <div class="tally" id="tally"></div>
+  </header>
+
+  <section><h2>The team</h2><div class="grid" id="team"></div></section>
+
+  <section>
+    <h2>Run log</h2>
+    <div class="tools">
+      <select id="fAgent" aria-label="Filter by agent"><option value="">All agents</option></select>
+      <select id="fStatus" aria-label="Filter by status"><option value="">All statuses</option></select>
+      <input id="fText" type="search" placeholder="Search tasks" aria-label="Search tasks">
+    </div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Timestamp</th><th>Agent Name</th><th>Task Performed</th><th>Output Status</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </section>
+
+  <section><h2>Latest daily brief</h2><div id="brief"></div></section>
+  <section><h2>Employee outputs</h2><div class="files" id="files"></div></section>
+
+  <footer id="foot"></footer>
+</div>
+
+<dialog id="dlg">
+  <div class="dh"><strong id="dname"></strong><button id="dclose">Close</button></div>
+  <pre id="dbody"></pre>
+</dialog>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const cls = (s) => ["ok","partial","failed"].includes(s) ? s : "";
+const fmt = (t) => { if (!t) return "never"; const d = new Date(t); return isNaN(d) ? t : d.toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"}); };
+
+fetch("data.json?t=" + Date.now()).then((r) => r.json()).then(render).catch((e) => {
+  $("sub").textContent = "Could not load data.json. Run: node scripts/build_dashboard.mjs";
+});
+
+function render(d) {
+  document.title = d.agency + " Dashboard";
+  $("title").textContent = d.agency;
+  $("sub").textContent = [d.brand, d.timezone, "Updated " + fmt(d.generatedAt)].filter(Boolean).join("  |  ");
+
+  const c = d.counts || {};
+  $("tally").innerHTML = [["Runs", d.runs.length], ["OK", c.ok || 0], ["Partial", c.partial || 0], ["Failed", c.failed || 0]]
+    .map(([k, v]) => `<div><b>${v}</b><span>${k}</span></div>`).join("");
+
+  $("team").innerHTML = d.employees.map((e) => `
+    <article class="card ${e.isProjectManager ? "pm" : ""}">
+      <h3>${esc(e.id)}</h3>
+      <div class="role">${esc(e.role)}</div>
+      <span class="badge ${cls(e.status)}">${esc(e.status)}</span>
+      <div class="task">${esc(e.task)}</div>
+      <div class="meta">${esc(e.schedule)}  |  last run ${esc(fmt(e.lastRun))}</div>
+    </article>`).join("") || '<div class="empty">No employees found in .installed.json</div>';
+
+  const agents = [...new Set(d.runs.map((r) => r.agent))], statuses = [...new Set(d.runs.map((r) => r.status))];
+  $("fAgent").insertAdjacentHTML("beforeend", agents.map((a) => `<option>${esc(a)}</option>`).join(""));
+  $("fStatus").insertAdjacentHTML("beforeend", statuses.map((a) => `<option>${esc(a)}</option>`).join(""));
+  const draw = () => {
+    const a = $("fAgent").value, s = $("fStatus").value, q = $("fText").value.toLowerCase();
+    const rows = d.runs.filter((r) => (!a || r.agent === a) && (!s || r.status === s) && (!q || r.task.toLowerCase().includes(q)));
+    $("rows").innerHTML = rows.map((r) => `<tr><td>${esc(fmt(r.timestamp))}</td><td>${esc(r.agent)}</td><td>${esc(r.task)}</td><td><span class="badge ${cls(r.status)}">${esc(r.status)}</span></td></tr>`).join("")
+      || '<tr><td colspan="4" class="empty">No runs match.</td></tr>';
+  };
+  ["fAgent","fStatus"].forEach((i) => $(i).onchange = draw); $("fText").oninput = draw; draw();
+
+  $("brief").innerHTML = d.brief
+    ? `<pre class="brief">${esc(d.brief.content)}</pre>`
+    : '<div class="empty">No brief yet. The Chief of Staff writes one after the 18:00 run.</div>';
+
+  $("files").innerHTML = d.outputs.map((o, i) => `
+    <button class="file" data-i="${i}"><b>${esc(o.file)}</b><span>${esc(o.agent)}  |  ${(o.size/1024).toFixed(1)} KB</span></button>`).join("")
+    || '<div class="empty">No files in data/out yet.</div>';
+  document.querySelectorAll(".file").forEach((b) => b.onclick = () => {
+    const o = d.outputs[b.dataset.i];
+    $("dname").textContent = o.file;
+    $("dbody").textContent = o.content + (o.truncated ? "\n\n[truncated]" : "");
+    $("dlg").showModal();
+  });
+  $("dclose").onclick = () => $("dlg").close();
+  $("foot").textContent = "Sample data only. Outbound actions stay held for the owner.";
+}
+</script>
+</body>
+</html>

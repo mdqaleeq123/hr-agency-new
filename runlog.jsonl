@@ -14,3 +14,27 @@
 {"timestamp":"2026-11-04T18:43:13+05:00","agent":"hr-analyst","task":"Computed funnel metrics, flagged 1 bottleneck(s)","status":"ok"}
 {"timestamp":"2026-11-04T18:43:15+05:00","agent":"compliance-auditor","task":"Audited candidate data and JDs, found 3 issue(s) for review","status":"partial"}
 {"timestamp":"2026-11-04T18:43:18+05:00","agent":"hr-chief-of-staff","task":"Audited all 7 agents (0 missing) and emailed the daily brief","status":"ok"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"resume-parser","task":"Parsed 4 resumes into structured candidate records","status":"ok"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"talent-sourcer","task":"Built sourcing plan with boolean search strings for 2 open requisitions","status":"ok"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"jd-outreach-writer","task":"Drafted 2 job descriptions and 4 held outreach emails","status":"ok"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"pipeline-manager","task":"Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)","status":"ok"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"onboarding-coordinator","task":"Generated 30/60/90 onboarding tracks for 1 new hire(s)","status":"ok"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"hr-analyst","task":"Computed funnel metrics, flagged 1 bottleneck(s)","status":"ok"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"compliance-auditor","task":"Audited candidate data and JDs, found 3 issue(s) for review","status":"partial"}
+{"timestamp":"2026-11-04T19:04:37+05:00","agent":"hr-chief-of-staff","task":"Audited all 7 agents (0 missing) and saved the daily brief","status":"ok"}
+{"timestamp":"2026-11-04T19:12:25+05:00","agent":"resume-parser","task":"Parsed 4 resumes into structured candidate records","status":"ok"}
+{"timestamp":"2026-11-04T19:12:28+05:00","agent":"talent-sourcer","task":"Built sourcing plan with boolean search strings for 2 open requisitions","status":"ok"}
+{"timestamp":"2026-11-04T19:12:30+05:00","agent":"jd-outreach-writer","task":"Drafted 2 job descriptions and 4 held outreach emails","status":"ok"}
+{"timestamp":"2026-11-04T19:12:32+05:00","agent":"pipeline-manager","task":"Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)","status":"ok"}
+{"timestamp":"2026-11-04T19:12:33+05:00","agent":"onboarding-coordinator","task":"Generated 30/60/90 onboarding tracks for 1 new hire(s)","status":"ok"}
+{"timestamp":"2026-11-04T19:12:37+05:00","agent":"hr-analyst","task":"Computed funnel metrics, flagged 1 bottleneck(s)","status":"ok"}
+{"timestamp":"2026-11-04T19:12:38+05:00","agent":"compliance-auditor","task":"Audited candidate data and JDs, found 3 issue(s) for review","status":"partial"}
+{"timestamp":"2026-11-04T19:12:42+05:00","agent":"hr-chief-of-staff","task":"Audited all 7 agents (0 missing) and emailed the daily brief","status":"ok"}
+{"timestamp":"2026-11-04T19:16:11+05:00","agent":"resume-parser","task":"Parsed 4 resumes into structured candidate records","status":"ok"}
+{"timestamp":"2026-11-04T19:16:14+05:00","agent":"talent-sourcer","task":"Built sourcing plan with boolean search strings for 2 open requisitions","status":"ok"}
+{"timestamp":"2026-11-04T19:16:16+05:00","agent":"jd-outreach-writer","task":"Drafted 2 job descriptions and 4 held outreach emails","status":"ok"}
+{"timestamp":"2026-11-04T19:16:18+05:00","agent":"pipeline-manager","task":"Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)","status":"ok"}
+{"timestamp":"2026-11-04T19:16:20+05:00","agent":"onboarding-coordinator","task":"Generated 30/60/90 onboarding tracks for 1 new hire(s)","status":"ok"}
+{"timestamp":"2026-11-04T19:16:22+05:00","agent":"hr-analyst","task":"Computed funnel metrics, flagged 1 bottleneck(s)","status":"ok"}
+{"timestamp":"2026-11-04T19:16:24+05:00","agent":"compliance-auditor","task":"Audited candidate data and JDs, found 3 issue(s) for review","status":"partial"}
+{"timestamp":"2026-11-04T19:16:28+05:00","agent":"hr-chief-of-staff","task":"Audited all 7 agents (0 missing) and emailed the daily brief","status":"ok"}

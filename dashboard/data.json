@@ -1,0 +1,336 @@
+{
+  "generatedAt": "2026-11-11T17:15:12.574Z",
+  "agency": "HR Agency",
+  "brand": "",
+  "timezone": "Asia/Karachi",
+  "employees": [
+    {
+      "id": "hr-chief-of-staff",
+      "role": "Project Manager (Chief of Staff)",
+      "routine": "hr-daily-audit-and-brief",
+      "schedule": "weekdays 18:00",
+      "isProjectManager": true,
+      "status": "ok",
+      "task": "Audited all 7 agents (0 missing) and emailed the daily brief",
+      "lastRun": "2026-11-04T19:16:28+05:00"
+    },
+    {
+      "id": "talent-sourcer",
+      "role": "Lead Researcher / Candidate Sourcer",
+      "routine": "sourcing-sweep",
+      "schedule": "weekdays 09:00",
+      "isProjectManager": false,
+      "status": "ok",
+      "task": "Built sourcing plan with boolean search strings for 2 open requisitions",
+      "lastRun": "2026-11-04T19:16:14+05:00"
+    },
+    {
+      "id": "resume-parser",
+      "role": "Data Parser",
+      "routine": "resume-intake",
+      "schedule": "weekdays 09:30",
+      "isProjectManager": false,
+      "status": "ok",
+      "task": "Parsed 4 resumes into structured candidate records",
+      "lastRun": "2026-11-04T19:16:11+05:00"
+    },
+    {
+      "id": "jd-outreach-writer",
+      "role": "Content Writer",
+      "routine": "draft-jd-and-outreach",
+      "schedule": "weekdays 10:00",
+      "isProjectManager": false,
+      "status": "ok",
+      "task": "Drafted 2 job descriptions and 4 held outreach emails",
+      "lastRun": "2026-11-04T19:16:16+05:00"
+    },
+    {
+      "id": "pipeline-manager",
+      "role": "Campaign Builder / Pipeline",
+      "routine": "pipeline-update",
+      "schedule": "weekdays 11:00",
+      "isProjectManager": false,
+      "status": "ok",
+      "task": "Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)",
+      "lastRun": "2026-11-04T19:16:18+05:00"
+    },
+    {
+      "id": "onboarding-coordinator",
+      "role": "Onboarding Tracks",
+      "routine": "onboarding-tracks",
+      "schedule": "weekdays 12:00",
+      "isProjectManager": false,
+      "status": "ok",
+      "task": "Generated 30/60/90 onboarding tracks for 1 new hire(s)",
+      "lastRun": "2026-11-04T19:16:20+05:00"
+    },
+    {
+      "id": "hr-analyst",
+      "role": "Performance Analyst",
+      "routine": "funnel-metrics",
+      "schedule": "weekdays 15:00",
+      "isProjectManager": false,
+      "status": "ok",
+      "task": "Computed funnel metrics, flagged 1 bottleneck(s)",
+      "lastRun": "2026-11-04T19:16:22+05:00"
+    },
+    {
+      "id": "compliance-auditor",
+      "role": "Technical Auditor / Data Quality",
+      "routine": "data-and-bias-audit",
+      "schedule": "weekdays 16:00",
+      "isProjectManager": false,
+      "status": "partial",
+      "task": "Audited candidate data and JDs, found 3 issue(s) for review",
+      "lastRun": "2026-11-04T19:16:24+05:00"
+    }
+  ],
+  "runs": [
+    {
+      "timestamp": "2026-11-04T19:16:28+05:00",
+      "agent": "hr-chief-of-staff",
+      "task": "Audited all 7 agents (0 missing) and emailed the daily brief",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:16:24+05:00",
+      "agent": "compliance-auditor",
+      "task": "Audited candidate data and JDs, found 3 issue(s) for review",
+      "status": "partial"
+    },
+    {
+      "timestamp": "2026-11-04T19:16:22+05:00",
+      "agent": "hr-analyst",
+      "task": "Computed funnel metrics, flagged 1 bottleneck(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:16:20+05:00",
+      "agent": "onboarding-coordinator",
+      "task": "Generated 30/60/90 onboarding tracks for 1 new hire(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:16:18+05:00",
+      "agent": "pipeline-manager",
+      "task": "Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:16:16+05:00",
+      "agent": "jd-outreach-writer",
+      "task": "Drafted 2 job descriptions and 4 held outreach emails",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:16:14+05:00",
+      "agent": "talent-sourcer",
+      "task": "Built sourcing plan with boolean search strings for 2 open requisitions",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:16:11+05:00",
+      "agent": "resume-parser",
+      "task": "Parsed 4 resumes into structured candidate records",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:42+05:00",
+      "agent": "hr-chief-of-staff",
+      "task": "Audited all 7 agents (0 missing) and emailed the daily brief",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:38+05:00",
+      "agent": "compliance-auditor",
+      "task": "Audited candidate data and JDs, found 3 issue(s) for review",
+      "status": "partial"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:37+05:00",
+      "agent": "hr-analyst",
+      "task": "Computed funnel metrics, flagged 1 bottleneck(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:33+05:00",
+      "agent": "onboarding-coordinator",
+      "task": "Generated 30/60/90 onboarding tracks for 1 new hire(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:32+05:00",
+      "agent": "pipeline-manager",
+      "task": "Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:30+05:00",
+      "agent": "jd-outreach-writer",
+      "task": "Drafted 2 job descriptions and 4 held outreach emails",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:28+05:00",
+      "agent": "talent-sourcer",
+      "task": "Built sourcing plan with boolean search strings for 2 open requisitions",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:12:25+05:00",
+      "agent": "resume-parser",
+      "task": "Parsed 4 resumes into structured candidate records",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "resume-parser",
+      "task": "Parsed 4 resumes into structured candidate records",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "talent-sourcer",
+      "task": "Built sourcing plan with boolean search strings for 2 open requisitions",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "jd-outreach-writer",
+      "task": "Drafted 2 job descriptions and 4 held outreach emails",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "pipeline-manager",
+      "task": "Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "onboarding-coordinator",
+      "task": "Generated 30/60/90 onboarding tracks for 1 new hire(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "hr-analyst",
+      "task": "Computed funnel metrics, flagged 1 bottleneck(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "compliance-auditor",
+      "task": "Audited candidate data and JDs, found 3 issue(s) for review",
+      "status": "partial"
+    },
+    {
+      "timestamp": "2026-11-04T19:04:37+05:00",
+      "agent": "hr-chief-of-staff",
+      "task": "Audited all 7 agents (0 missing) and saved the daily brief",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:18+05:00",
+      "agent": "hr-chief-of-staff",
+      "task": "Audited all 7 agents (0 missing) and emailed the daily brief",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:15+05:00",
+      "agent": "compliance-auditor",
+      "task": "Audited candidate data and JDs, found 3 issue(s) for review",
+      "status": "partial"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:13+05:00",
+      "agent": "hr-analyst",
+      "task": "Computed funnel metrics, flagged 1 bottleneck(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:11+05:00",
+      "agent": "onboarding-coordinator",
+      "task": "Generated 30/60/90 onboarding tracks for 1 new hire(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:09+05:00",
+      "agent": "pipeline-manager",
+      "task": "Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:07+05:00",
+      "agent": "jd-outreach-writer",
+      "task": "Drafted 2 job descriptions and 4 held outreach emails",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:05+05:00",
+      "agent": "talent-sourcer",
+      "task": "Built sourcing plan with boolean search strings for 2 open requisitions",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:43:02+05:00",
+      "agent": "resume-parser",
+      "task": "Parsed 4 resumes into structured candidate records",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:41+05:00",
+      "agent": "hr-chief-of-staff",
+      "task": "Audited all 7 agents (0 missing) and emailed the daily brief",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:38+05:00",
+      "agent": "compliance-auditor",
+      "task": "Audited candidate data and JDs, found 3 issue(s) for review",
+      "status": "partial"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:36+05:00",
+      "agent": "hr-analyst",
+      "task": "Computed funnel metrics, flagged 1 bottleneck(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:34+05:00",
+      "agent": "onboarding-coordinator",
+      "task": "Generated 30/60/90 onboarding tracks for 1 new hire(s)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:32+05:00",
+      "agent": "pipeline-manager",
+      "task": "Scored and staged 4 candidates (2 Shortlisted, 1 Talent pool, 1 Screening)",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:30+05:00",
+      "agent": "jd-outreach-writer",
+      "task": "Drafted 2 job descriptions and 4 held outreach emails",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:28+05:00",
+      "agent": "talent-sourcer",
+      "task": "Built sourcing plan with boolean search strings for 2 open requisitions",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-11-04T18:20:24+05:00",
+      "agent": "resume-parser",
+      "task": "Parsed 4 resumes into structured candidate records",
+      "status": "ok"
+    }
+  ],
+  "outputs": [],
+  "brief": null,
+  "counts": {
+    "ok": 35,
+    "partial": 5
+  }
+}
