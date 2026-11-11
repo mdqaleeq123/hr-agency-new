@@ -69,7 +69,7 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
   <header>
     <div>
       <h1 id="title">Marketing Agency</h1>
-      <div class="sub" id="sub">Loading…</div>
+   <div class="sub" id="sub"></div>
     </div>
     <div class="tally" id="tally"></div>
   </header>
@@ -84,7 +84,7 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
       <input id="fText" type="search" placeholder="Search tasks" aria-label="Search tasks">
     </div>
     <div class="tablebox"><table>
-      <thead><tr><th>Timestamp</th><th>Agent Name</th><th>Task Performed</th><th>Output Status</th></tr></thead>
+      <thead><tr><th>Agent Name</th><th>Task Performed</th><th>Output Status</th></tr></thead>
       <tbody id="rows"></tbody>
     </table></div>
   </section>
@@ -113,13 +113,7 @@ fetch("data.json?t=" + Date.now()).then((r) => r.json()).then(render).catch((e) 
 function render(d) {
   document.title = d.agency + " Dashboard";
   $("title").textContent = d.agency;
-  const TIMEZONE = "Europe/Riga";
-
-$("sub").textContent = [
-  d.brand,
-  TIMEZONE,
-  "Updated " + fmt(d.generatedAt)
-].filter(Boolean).join("  |  ");
+  $("sub").textContent = "";
 
   const c = d.counts || {};
   $("tally").innerHTML = [["Runs", d.runs.length], ["OK", c.ok || 0], ["Partial", c.partial || 0], ["Failed", c.failed || 0]]
@@ -131,7 +125,7 @@ $("sub").textContent = [
       <div class="role">${esc(e.role)}</div>
       <span class="badge ${cls(e.status)}">${esc(e.status)}</span>
       <div class="task">${esc(e.task)}</div>
-      <div class="meta">${esc(e.schedule)}  |  last run ${esc(fmt(e.lastRun))}</div>
+      <div class="meta">${esc(e.schedule)}</div>
     </article>`).join("") || '<div class="empty">No employees found in .installed.json</div>';
 
   const agents = [...new Set(d.runs.map((r) => r.agent))], statuses = [...new Set(d.runs.map((r) => r.status))];
@@ -140,8 +134,8 @@ $("sub").textContent = [
   const draw = () => {
     const a = $("fAgent").value, s = $("fStatus").value, q = $("fText").value.toLowerCase();
     const rows = d.runs.filter((r) => (!a || r.agent === a) && (!s || r.status === s) && (!q || r.task.toLowerCase().includes(q)));
-    $("rows").innerHTML = rows.map((r) => `<tr><td>${esc(fmt(r.timestamp))}</td><td>${esc(r.agent)}</td><td>${esc(r.task)}</td><td><span class="badge ${cls(r.status)}">${esc(r.status)}</span></td></tr>`).join("")
-      || '<tr><td colspan="4" class="empty">No runs match.</td></tr>';
+    $("rows").innerHTML = rows.map((r) => `<tr><td>${esc(r.agent)}</td><td>${esc(r.task)}</td><td><span class="badge ${cls(r.status)}">${esc(r.status)}</span></td></tr>`).join("")
+      || '<tr><td colspan="3" class="empty">No runs match.</td></tr>';
   };
   ["fAgent","fStatus"].forEach((i) => $(i).onchange = draw); $("fText").oninput = draw; draw();
 
