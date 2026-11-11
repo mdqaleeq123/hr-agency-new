@@ -113,7 +113,13 @@ fetch("data.json?t=" + Date.now()).then((r) => r.json()).then(render).catch((e) 
 function render(d) {
   document.title = d.agency + " Dashboard";
   $("title").textContent = d.agency;
-  $("sub").textContent = [d.brand, d.timezone, "Updated " + fmt(d.generatedAt)].filter(Boolean).join("  |  ");
+  const TIMEZONE = "Europe/Riga";
+
+$("sub").textContent = [
+  d.brand,
+  TIMEZONE,
+  "Updated " + fmt(d.generatedAt)
+].filter(Boolean).join("  |  ");
 
   const c = d.counts || {};
   $("tally").innerHTML = [["Runs", d.runs.length], ["OK", c.ok || 0], ["Partial", c.partial || 0], ["Failed", c.failed || 0]]
