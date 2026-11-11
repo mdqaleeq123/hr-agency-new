@@ -1,0 +1,14 @@
+{
+  "name": "hr-agency",
+  "version": "1.0.0",
+  "description": "HR Agency: 8 autonomous AI employees with Google Sheet ledger and daily email brief",
+  "type": "module",
+  "scripts": {
+    "selftest": "node scripts/runlog.mjs --selftest",
+    "run": "node scripts/run_all.mjs",
+    "brief": "node scripts/daily_brief.mjs",
+    "flush": "node scripts/sheet_bridge.mjs --flush"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

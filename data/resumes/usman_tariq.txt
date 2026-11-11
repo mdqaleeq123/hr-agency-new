@@ -1,0 +1,14 @@
+Usman Tariq
+Email: usman.tariq@example
+Phone: 03005551234
+Location: Rawalpindi
+
+EXPERIENCE
+DevOps Engineer, CloudSys (2021 - Present)
+- Managed Kubernetes clusters and CI/CD pipelines on AWS
+
+EDUCATION
+BS Electrical Engineering, UET, 2018
+
+SKILLS
+AWS, Docker, Kubernetes, Terraform, Linux, Python, Jenkins

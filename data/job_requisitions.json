@@ -1,0 +1,20 @@
+[
+  {
+    "id": "REQ-101",
+    "title": "Backend Engineer",
+    "location": "Islamabad (hybrid)",
+    "min_years": 3,
+    "required_skills": ["python", "sql", "aws", "docker"],
+    "nice_to_have": ["django", "postgresql", "kubernetes"],
+    "openings": 2
+  },
+  {
+    "id": "REQ-102",
+    "title": "HR Data Analyst",
+    "location": "Remote (Pakistan)",
+    "min_years": 2,
+    "required_skills": ["python", "sql", "power bi"],
+    "nice_to_have": ["pandas", "tableau", "statistics"],
+    "openings": 1
+  }
+]

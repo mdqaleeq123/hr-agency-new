@@ -1,0 +1,36 @@
+{
+  "agency": "HR Agency",
+  "slug": "hr-agency",
+  "version": "1.0.0",
+  "installedAt": "2026-11-03T22:00:00+05:00",
+  "timezone": "Asia/Karachi",
+  "basedOn": {
+    "repo": "https://github.com/markfulton/ai-employees",
+    "note": "Same kit layout as ai-employees (ROLE.md, SCHEDULE.md, routines/<id>/SKILL.md, runlog.jsonl). The HR roles are custom kits written for this assignment because the upstream repo ships 8 non-HR roles."
+  },
+  "harness": "claude-code",
+  "employees": [
+    { "id": "hr-chief-of-staff",        "role": "Project Manager (Chief of Staff)", "folder": "employees/hr-chief-of-staff",        "routine": "hr-daily-audit-and-brief", "schedule": "weekdays 18:00", "isProjectManager": true },
+    { "id": "talent-sourcer",           "role": "Lead Researcher / Candidate Sourcer", "folder": "employees/talent-sourcer",        "routine": "sourcing-sweep",           "schedule": "weekdays 09:00" },
+    { "id": "resume-parser",            "role": "Data Parser",                      "folder": "employees/resume-parser",           "routine": "resume-intake",            "schedule": "weekdays 09:30" },
+    { "id": "jd-outreach-writer",       "role": "Content Writer",                   "folder": "employees/jd-outreach-writer",      "routine": "draft-jd-and-outreach",    "schedule": "weekdays 10:00" },
+    { "id": "pipeline-manager",         "role": "Campaign Builder / Pipeline",      "folder": "employees/pipeline-manager",        "routine": "pipeline-update",          "schedule": "weekdays 11:00" },
+    { "id": "onboarding-coordinator",   "role": "Onboarding Tracks",                "folder": "employees/onboarding-coordinator",  "routine": "onboarding-tracks",        "schedule": "weekdays 12:00" },
+    { "id": "hr-analyst",               "role": "Performance Analyst",              "folder": "employees/hr-analyst",              "routine": "funnel-metrics",           "schedule": "weekdays 15:00" },
+    { "id": "compliance-auditor",       "role": "Technical Auditor / Data Quality", "folder": "employees/compliance-auditor",      "routine": "data-and-bias-audit",      "schedule": "weekdays 16:00" }
+  ],
+  "automationBridges": {
+    "runLogger": "scripts/runlog.mjs",
+    "sheetLedger": "scripts/sheet_bridge.mjs",
+    "dailyEmail": "scripts/daily_brief.mjs",
+    "orchestrator": "scripts/run_all.mjs",
+    "googleAppsScript": "apps-script/Code.gs",
+    "ledgerColumns": ["Timestamp", "Agent Name", "Task Performed", "Output Status"]
+  },
+  "guardrails": {
+    "outboundActionsHeld": true,
+    "noCredentialsInFiles": true,
+    "candidateDataLocalOnly": true,
+    "note": "Emails and sheet writes go only to the owner's own Apps Script web app. Nothing is sent to candidates."
+  }
+}

@@ -1,0 +1,5 @@
+.env
+*.secret
+node_modules/
+data/ledger-queue.csv
+.DS_Store

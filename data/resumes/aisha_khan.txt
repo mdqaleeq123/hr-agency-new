@@ -1,0 +1,20 @@
+Aisha Khan
+Email: aisha.khan@example.com | Phone: +92 300 1234567
+Location: Islamabad, Pakistan
+
+SUMMARY
+Backend engineer with 5 years of experience building APIs and data pipelines.
+
+EXPERIENCE
+Senior Software Engineer, TechNova (2022 - Present)
+- Built Python and Django services handling 2M requests/day
+- Led migration to AWS and Docker
+
+Software Engineer, DataBridge (2019 - 2022)
+- Developed SQL reporting pipelines with PostgreSQL
+
+EDUCATION
+BS Computer Science, NUST, 2019
+
+SKILLS
+Python, Django, SQL, PostgreSQL, AWS, Docker, REST APIs, Git

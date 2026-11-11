@@ -1,0 +1,16 @@
+Bilal Ahmed
+Email: bilal.ahmed@example.com | Phone: 0321-7654321
+Location: Lahore
+
+PROFILE
+Junior full-stack developer, fresh graduate with 1 year of internship experience.
+
+EXPERIENCE
+Software Intern, WebWorks (2025 - 2026)
+- Built React front-end components and Node.js endpoints
+
+EDUCATION
+BS Software Engineering, FAST, 2025
+
+SKILLS
+JavaScript, React, Node.js, HTML, CSS, Git, MongoDB

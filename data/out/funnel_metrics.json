@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "candidates": 4,
+    "shortlisted": 2,
+    "screening": 1,
+    "talent_pool": 1,
+    "shortlist_rate_pct": 50
+  },
+  "flags": [
+    "Bottleneck: only 2 shortlisted for 3 openings - widen sourcing"
+  ]
+}

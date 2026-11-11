@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Aisha Khan",
+    "email": "aisha.khan@example.com",
+    "phone": "+92 300 1234567",
+    "location": "Islamabad, Pakistan",
+    "skills": [
+      "python",
+      "django",
+      "sql",
+      "postgresql",
+      "aws",
+      "docker",
+      "rest apis",
+      "git"
+    ],
+    "education": "BS Computer Science, NUST, 2019",
+    "years_computed": 7,
+    "years_claimed": 5,
+    "source_file": "aisha_khan.txt"
+  },
+  {
+    "name": "Bilal Ahmed",
+    "email": "bilal.ahmed@example.com",
+    "phone": "0321-7654321",
+    "location": "Lahore",
+    "skills": [
+      "javascript",
+      "react",
+      "node.js",
+      "html",
+      "css",
+      "git",
+      "mongodb"
+    ],
+    "education": "BS Software Engineering, FAST, 2025",
+    "years_computed": 1,
+    "years_claimed": 1,
+    "source_file": "bilal_ahmed.txt"
+  },
+  {
+    "name": "Sara Malik",
+    "email": "sara.malik@example.com",
+    "phone": "+92 333 9988776",
+    "location": "Karachi, Pakistan",
+    "skills": [
+      "python",
+      "sql",
+      "power bi",
+      "excel",
+      "tableau",
+      "statistics",
+      "pandas"
+    ],
+    "education": "MS Data Science, IBA Karachi, 2020",
+    "years_computed": 6,
+    "years_claimed": 4,
+    "source_file": "sara_malik.txt"
+  },
+  {
+    "name": "Usman Tariq",
+    "email": "usman.tariq@example",
+    "phone": "03005551234",
+    "location": "Rawalpindi",
+    "skills": [
+      "aws",
+      "docker",
+      "kubernetes",
+      "terraform",
+      "linux",
+      "python",
+      "jenkins"
+    ],
+    "education": "BS Electrical Engineering, UET, 2018",
+    "years_computed": 5,
+    "years_claimed": null,
+    "source_file": "usman_tariq.txt"
+  }
+]

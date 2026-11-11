@@ -1,0 +1,20 @@
+Sara Malik
+Email: sara.malik@example.com | Phone: +92 333 9988776
+Location: Karachi, Pakistan
+
+SUMMARY
+HR-tech minded data analyst with 4 years of experience in dashboards and reporting.
+
+EXPERIENCE
+Data Analyst, PeopleFirst (2022 - Present)
+- Created Power BI dashboards for hiring funnel and attrition
+- Automated reporting with Python and SQL
+
+Business Analyst, FinServe (2020 - 2022)
+- Gathered requirements and wrote SQL queries
+
+EDUCATION
+MS Data Science, IBA Karachi, 2020
+
+SKILLS
+Python, SQL, Power BI, Excel, Tableau, Statistics, Pandas
